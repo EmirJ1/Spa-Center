@@ -47,6 +47,7 @@ nav ul li a:hover{
 .produkti1 h2{
     text-align: center;
     margin-top: 10px;
+    color: black;
 }
 .produkti1 h2:hover{
     color: red;
@@ -67,6 +68,7 @@ nav ul li a:hover{
 .produkti2 h2{
     text-align: center;
     margin-top: 10px;
+    color: black;
 }
 .produkti2 h2:hover{
     color: red;
@@ -87,6 +89,7 @@ nav ul li a:hover{
 .produkti3 h2{
     text-align: center;
     margin-top: 10px;
+    color: black;
 }
 .produkti3 h2:hover{
     color: red;
@@ -111,7 +114,7 @@ footer{
 .icons h2{
     text-align: center;
     margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 190px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }   
@@ -119,12 +122,34 @@ footer{
     margin-top: 30px;
     margin-left: 170px;
 }
-.fa{
+.icons p{
     margin-left: 200px;
-    margin-top: 15px;
-    width: 75px;
-    padding: 0px 3px;
-    background: #3B5998;
+    margin-top: 20px;
+}
+.fb{
+    text-decoration: none;
+    color: black;
+}
+.fb:active{
+    background-color: rgb(61, 61, 249);
     color: white;
-    border-radius: 5px;
+}
+.inst{
+    text-decoration: none;
+    color: black;
+}
+.inst:active{
+    background-color: #e0b366 ;
+    color:white;
+    width: 70px;
+   
+}
+.contacts{
+    margin-left: 350px;
+    margin-top: 50px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contacts p{
+    margin-top: 20px;
 }
