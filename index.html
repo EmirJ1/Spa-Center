@@ -1,55 +1,44 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Kursi TechUP</title>
-	  	<link rel="stylesheet" type="text/css" href="styling.css">
-		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<header>
-		<nav>
-			<label id="title">Auto Keta</label>
-			<ul>
-				<li><a href="/home">Home</a></li>
-				<li><a href="/cars">Cars</a></li>
-				<li><a href="/contact">Contact</a></li>
-			</ul>
-		</nav>
-	  </header>
-	  <section>
-		<div class="row">
-		<div class="produkti1">
-			<img src="/bmw.jpg" alt="Bmw">
-				<a href="@"><h2>BMW X3 xDrive</h2></a>
-		</div>
-		<div class="produkti2">
-			<img src="/golf 7.jpg" alt="golf 7">
-				<a href="@"><h2>Golf VII</h2></a>
-		</div>
-		<div class="produkti3">
-			<img src="/mazda.jpg" alt="mazda">
-				<a href="@"><h2>Mazda XC-5</h2></a>
-		</div>
-		</div>
-	  </section>
-	  <footer>
-		<div class="footer">
-			<img src="/logo.png" alt="logo">
-		</div>
-		<div class="icons">
-			<h2>Follow Us</h2>
-			<a href="https://facebook.com/autoketa"><p class="fb">Facebook</p></a>
-			<a href="https://instagram.com/autoketa1"><p class="inst">Instagram</p></a>
-		</div>
-		<div class="contacts">
-			<h2>Contact</h2>
-			<p>Ilindenska 209 , Gostivar , 1230 , North Macedonia<br>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="Icon" type="Icon" href="images/logo.png">
+    <title>Hotel Keta</title>
+</head>
+<body>
+    <div class="flex items-center justify-center" style="background-image:
+    linear-gradient(to right, rgba(22, 22, 23, 0.5), rgba(22, 22, 23, 0.5)),url('images/rec.jpg'); height: 100vh; background-position: center center; background-size: cover;">
+       <div class="gap-2 text-center">
+        <h1 class="text-5xl text-gray-200 font-bold uppercase ">Enjoy A Luxury Experience</h1> 
+        <a href="/" class="inline-block mt-9 px-5 py-3 text-white text-xl uppercase border-2 border-gray-200 hover:bg-gray-200 bg-transparent hover:text-black">Rooms & Suites</a>
+    </div>
+    <div class="gap-6 absolute bottom-24 bg-white px-2 py-2 border-4 border-yellow-900">
+    <input type="date" placeholder="Check in" name="checkin" class="border-r-2 border-yellow-900">
+    <input type="date" placeholder="Check out" name="Checkout" class="border-r-2 border-yellow-900">
 
-				<br>T. +389 70 378 342<br>
-				
-				<br>E. autoketa@hotmail.com</p>
-		</div>
-	  </footer>
-	</body>
+    <select name="adult" id="adult">
+        <option value="1">1 Adult</option>
+        <option value="2">2 Adults</option>
+        <option value="3">3 Adults</option>
+    </select>
+
+    <select name="children" id="children" class="border-r-2 border-yellow-900">
+        <option value="1">1 Children</option>
+        <option value="2">2 Childrens</option>
+        <option value="3">3 Childrens</option>
+    </select>
+
+    <select name="rooms" id="rooms" class="border-r-2 border-yellow-900">
+        <option value="1">1 Room</option>
+        <option value="2">2 Roms</option>
+        <option value="3">3 Roms</option>
+    </select>
+    <button type="submit" class="px-4 py-3 bg-yellow-900 text-white hover:bg-black hover:text-white">Check Now</button>
+    </div>  
+    </div>
+
+</body>
 </html>
