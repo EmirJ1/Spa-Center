@@ -13,32 +13,42 @@
     linear-gradient(to right, rgba(22, 22, 23, 0.5), rgba(22, 22, 23, 0.5)),url('images/rec.jpg'); height: 100vh; background-position: center center; background-size: cover;">
        <div class="gap-2 text-center">
         <h1 class="text-5xl text-gray-200 font-bold uppercase ">Enjoy A Luxury Experience</h1> 
-        <a href="/" class="inline-block mt-9 px-5 py-3 text-white text-xl uppercase border-2 border-gray-200 hover:bg-gray-200 bg-transparent hover:text-black">Rooms & Suites</a>
+        <a href="/" class="inline-block mt-9 px-5 py-3 text-white text-xl uppercase border-2 border-white hover:bg-gray-200 bg-transparent hover:text-black">Rooms & Suites</a>
     </div>
-    <div class="gap-6 absolute bottom-24 bg-white px-2 py-2 border-4 border-yellow-900">
-    <input type="date" placeholder="Check in" name="checkin" class="border-r-2 border-yellow-900">
-    <input type="date" placeholder="Check out" name="Checkout" class="border-r-2 border-yellow-900">
+    <div class="grid grid-cols-6 absolute bottom-24 bg-white">
+    <input type="text" placeholder="Check in" name="checkin" class="border-2 border-yellow-700 border-r-2 border-yellow-700">
+    <input type="date" placeholder="Check out" name="Checkout" class="border-2 border-yellow-700  border-r-2 border-yellow-700">
 
-    <select name="adult" id="adult">
+    <select name="adult" id="adult" class=" border-2 border-yellow-700 ">
         <option value="1">1 Adult</option>
         <option value="2">2 Adults</option>
         <option value="3">3 Adults</option>
     </select>
 
-    <select name="children" id="children" class="border-r-2 border-yellow-900">
+    <select name="children" id="children" class="border-2 border-yellow-700 border-r-2 border-yellow-700">
         <option value="1">1 Children</option>
         <option value="2">2 Childrens</option>
         <option value="3">3 Childrens</option>
     </select>
 
-    <select name="rooms" id="rooms" class="border-r-2 border-yellow-900">
+    <select name="rooms" id="rooms" class=" border-2 border-yellow-700 `border-r-2 border-yellow-700">
         <option value="1">1 Room</option>
         <option value="2">2 Roms</option>
         <option value="3">3 Roms</option>
     </select>
-    <button type="submit" class="px-4 py-3 bg-yellow-900 text-white hover:bg-black hover:text-white">Check Now</button>
+    <button type="submit" class="px-4 py-3 bg-yellow-700 text-white hover:bg-black hover:text-white">Check Now</button>
     </div>  
     </div>
+    <section class="bg-white grid grid-cols-2 mt-12" style="height: 50vh;">
+        <div class="text-center">
+            <h2 class="text-4xl text-black font-bold">KETA LUXURY HOTEL</h2>
+            <h1 class="text-5xl text-black ">Enjoy a Luxury Experience</h1>
+        </div>
+        <div class="flex gap-4 justify-center right-12 absolute">
+            <img src="/images/res.jpg" alt="" style="width: 600px;">
+            <img src="/images/spa.jpg" alt="" style="width: 400px; margin-top: 100px;">
+        </div>
 
+    </section>
 </body>
 </html>
