@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Stilizimi */
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      width: 500px;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      z-index: 9999;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .inputGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .inputGroup input {
+      padding: 8px;
+      border: 1px solid #141414;
+      border-radius: 5px;
+      background-color: #E8E8E8;
+      width: 60%;
+    }
+
+    .inputGroup button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #77C751;
+      color: #fff;
+      cursor: pointer;
+      width: 90px;
+      margin: 10px auto 0; /* Vendos butonin në qendër vertikalisht */
+    }
+
+    .closeIcon {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+
+    .header {
+      height: 120px;
+      background-color: #f0f0f0; /* Ngjyra e background-it për header */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      margin-bottom: 20px;
+      position: relative; /* Kërko që pozicioni të jetë i ndryshueshëm */
+    }
+
+    .header img {
+      width: 150px; /* Përcakto madhësinë e logot */
+      height: auto;
+      position: absolute; /* Vendos pozicionin absolute për logon */
+      left: 50%; /* Vendos në mesin horizontal */
+      transform: translateX(-50%); /* Qendro në mes */
+    }
+
+    .header h2 {
+      margin-top: 200px;
+      
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showModal()">Shto Produkt</button>
+
+<div id="productModal" class="modal">
+  <!-- Këtu do të shfaqet div-i për produktin e ri -->
+</div>
+
+<script>
+  function showModal() {
+    var modal = document.getElementById("productModal");
+    modal.innerHTML = ""; // Pastro div-in modal para se të shtojmë elementet e reja
+
+    var header = document.createElement("div");
+    header.classList.add("header");
+
+    var logo = document.createElement("img");
+    logo.src = "/logo.png"; // Vendosni path-in e logot tuaj
+    logo.alt = "Logo";
+
+    header.appendChild(logo);
+
+    var h2Element = document.createElement("h2");
+    h2Element.textContent = "Add Members";
+    header.appendChild(h2Element);
+
+    var inputGroup = document.createElement("div");
+    inputGroup.classList.add("inputGroup");
+
+    // Krijimi i inputeve për produktin e ri në div-in modal
+    for (var i = 0; i < 5; i++) {
+      var input = document.createElement("input");
+      input.type = "text";
+      if (i === 0) {
+        input.placeholder = "Name Surname"; // Placeholder për inputin e parë
+      } else if (i === 1) {
+        input.placeholder = "ID Number"; // Placeholder për inputin e dytë
+      } else if (i === 2) {
+        input.placeholder = "Plase"; // Placeholder për inputin e tretë
+      } else if (i === 3) {
+        input.placeholder = "Payment"; // Placeholder për inputin e katërt
+      } else if (i === 4) {
+        input.placeholder = "Date and Time"; // Placeholder për inputin e pestë
+      }
+      inputGroup.appendChild(input);
+    }
+
+    var addButton = document.createElement("button");
+    addButton.textContent = "Add";
+    addButton.addEventListener("click", function() {
+      // Logjika për shtimin e produktit
+      // Kjo mund të përfshijë marrjen e vlerave nga inputet dhe manipulimin e tyre
+      console.log("Produkti u shtua!");
+    });
+    inputGroup.appendChild(addButton);
+
+    var closeButton = document.createElement("i");
+    closeButton.classList.add("fas", "fa-times", "closeIcon");
+    closeButton.addEventListener("click", function() {
+      // Fshirja e div-it modal kur klikohet ikona e mbylljes
+      modal.classList.remove("show");
+    });
+
+    modal.appendChild(header);
+    modal.appendChild(inputGroup);
+    modal.appendChild(closeButton);
+
+    // Shfaq div-in modal
+    modal.classList.add("show");
+  }
+</script>
+
+
+</body>
+</html>
