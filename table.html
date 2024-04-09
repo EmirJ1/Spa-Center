@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="Icon" type="Icon" href="images/logo.png">
+        <style>
+      .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      width: 500px;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      z-index: 9999;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .inputGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .inputGroup input {
+      padding: 8px;
+      border: 1px solid #141414;
+      border-radius: 5px;
+      background-color: #E8E8E8;
+      width: 60%;
+    }
+
+    .inputGroup button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #77C751;
+      color: #fff;
+      cursor: pointer;
+      width: 90px;
+      margin: 10px auto 0; /* Vendos butonin në qendër vertikalisht */
+    }
+
+    .closeIcon {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+
+    .header {
+      height: 120px;
+      background-color: #f0f0f0; /* Ngjyra e background-it për header */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      margin-bottom: 20px;
+      position: relative; /* Kërko që pozicioni të jetë i ndryshueshëm */
+    }
+
+    .header img {
+      width: 150px; /* Përcakto madhësinë e logot */
+      height: auto;
+      position: absolute; /* Vendos pozicionin absolute për logon */
+      left: 50%; /* Vendos në mesin horizontal */
+      transform: translateX(-50%); /* Qendro në mes */
+    }
+
+    .header h2 {
+      margin-top: 200px;
+      
+    }
+    table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ccc; /* Krijon kufij për qelizat */
+  padding: 8px; /* Shton hapësirë përmbajtjes brenda qelizave */
+}
+        </style>
+        <title>Spa Center Members</title>
+    </head>
+<body>
+    <header class="bg-gray-200">
+        <div class="flex items-center justify-center">
+        <img src="/images/logo1.png" alt="" class="w-40">
+        </div>
+    </header>
+    <section>
+        <div class="flex justify-between mt-4">
+            <button class="flex bg-green-600 px-3 py-1 rounded-xl text-white cursor-pointer" onclick="openEditModal()">50
+                <svg width="25" height="25" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.4993 9.1665C29.9305 9.1665 32.2621 10.1323 33.9812 11.8514C35.7002 13.5704 36.666 15.902 36.666 18.3332C36.666 20.7643 35.7002 23.0959 33.9812 24.815C32.2621 26.5341 29.9305 27.4998 27.4993 27.4998C25.0682 27.4998 22.7366 26.5341 21.0175 24.815C19.2985 23.0959 18.3327 20.7643 18.3327 18.3332C18.3327 15.902 19.2985 13.5704 21.0175 11.8514C22.7366 10.1323 25.0682 9.1665 27.4993 9.1665ZM27.4993 32.0832C37.6285 32.0832 45.8327 36.1853 45.8327 41.2498V45.8332H9.16602V41.2498C9.16602 36.1853 17.3702 32.0832 27.4993 32.0832Z" fill="white"/>
+                </svg>   
+            </button>
+            <button class="bg-green-600 px-3 py-1 rounded-xl text-white" onclick="showModal()">+ NEW</button>
+        </div>
+       
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-12 text-center">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  Name Surname
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  ID Number
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Place
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Price
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Action
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 ">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Auto Keta
+              </th>
+              <td class="px-6 py-4">
+                  1230145
+              </td>
+              <td class="px-6 py-4">
+                  Gostivar  
+              </td>
+              <td class="px-6 py-4">
+                  1200 den
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Microsoft Surface Pro
+              </th>
+              <td class="px-6 py-4">
+                  White
+              </td>
+              <td class="px-6 py-4">
+                  Laptop PC
+              </td>
+              <td class="px-6 py-4">
+                  $1999
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Magic Mouse 2
+              </th>
+              <td class="px-6 py-4">
+                  Black
+              </td>
+              <td class="px-6 py-4">
+                  Accessories
+              </td>
+              <td class="px-6 py-4">
+                  $99
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Google Pixel Phone
+              </th>
+              <td class="px-6 py-4">
+                  Gray
+              </td>
+              <td class="px-6 py-4">
+                  Phone
+              </td>
+              <td class="px-6 py-4">
+                  $799
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+          <tr>
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Apple Watch 5
+              </th>
+              <td class="px-6 py-4">
+                  Red
+              </td>
+              <td class="px-6 py-4">
+                  Wearables
+              </td>
+              <td class="px-6 py-4">
+                  $999
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+    </section>
+
+    <div id="productModal" class="modal">
+        <!-- Këtu do të shfaqet div-i për produktin e ri -->
+      </div>      
+      <!-- Vendosni këtë skript brenda seksionit <script> në faqen tuaj HTML -->
+        <script>
+          function showModal() {
+            var modal = document.getElementById("productModal");
+            modal.innerHTML = ""; // Pastro div-in modal para se të shtojmë elementet e reja
+        
+            var header = document.createElement("div");
+            header.classList.add("header");
+        
+            var logo = document.createElement("img");
+            logo.src = "images/logo1.png"; // Vendosni path-in e logot tuaj
+            logo.alt = "Logo";
+        
+            header.appendChild(logo);
+        
+            var h2Element = document.createElement("h2");
+            h2Element.textContent = "Add Members";
+            header.appendChild(h2Element);
+        
+            var inputGroup = document.createElement("div");
+            inputGroup.classList.add("inputGroup");
+        
+            // Krijimi i inputeve për produktin e ri në div-in modal
+            for (var i = 0; i < 4; i++) {
+              var input = document.createElement("input");
+              input.type = "text";
+              if (i === 0) {
+                input.placeholder = "Name Surname"; // Placeholder për inputin e parë
+              } else if (i === 1) {
+                input.placeholder = "ID Number"; // Placeholder për inputin e dytë
+              } else if (i === 2) {
+                input.placeholder = "Plase"; // Placeholder për inputin e tretë
+              } else if (i === 3) {
+                input.placeholder = "Payment"; // Placeholder për inputin e katërt
+              }
+              inputGroup.appendChild(input);
+            }
+        
+            var addButton = document.createElement("button");
+            addButton.textContent = "Add";
+            addButton.addEventListener("click", function() {
+              var inputs = inputGroup.querySelectorAll("input");
+        
+              var tableBody = document.querySelector("tbody");
+              var newRow = tableBody.insertRow(-1);
+        
+              var rowData = []; // Array për të ruajtur të dhënat e një rreshti
+        
+              for (var i = 0; i < inputs.length; i++) {
+                var newCell = newRow.insertCell(i);
+                newCell.textContent = inputs[i].value;
+                rowData.push(inputs[i].value); // Shto vlerën në array
+              }
+        
+              // Krijimi i butonave "Edit" dhe "Delete" për rreshtin e ri në tabelë
+              var editButton = document.createElement("button");
+              editButton.textContent = "Edit";
+              editButton.classList.add("editButtonClass"); // Shtoni klasën tuaj për stilizim
+              editButton.onclick = function() {
+                editRow(newRow); // Lidhja e funksionit "Edit" me butonin "Edit"
+              };
+        
+              var deleteButton = document.createElement("button");
+              deleteButton.textContent = "Delete";
+              deleteButton.classList.add("deleteButtonClass"); // Shtoni klasën tuaj për stilizim
+              deleteButton.onclick = function() {
+                deleteRow(newRow); // Lidhja e funksionit "Delete" me butonin "Delete"
+              };
+        
+              var optionsCell = newRow.insertCell(inputs.length); // Shto butonat në qelizën e fundit të rreshtit
+              optionsCell.appendChild(editButton);
+              optionsCell.appendChild(deleteButton);
+        
+              saveData(rowData); // Ruaj të dhënat në localStorage
+              closeModal();
+            });
+        
+            inputGroup.appendChild(addButton);
+        
+            var closeButton = document.createElement("i");
+            closeButton.classList.add("fas", "fa-times", "closeIcon");
+            closeButton.addEventListener("click", function() {
+              modal.classList.remove("show");
+            });
+        
+            modal.appendChild(header);
+            modal.appendChild(inputGroup);
+            modal.appendChild(closeButton);
+        
+            modal.classList.add("show");
+          }
+        
+          // funksionet e tjera...
+        
+        </script>
+        
+</body>
+</html>

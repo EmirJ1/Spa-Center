@@ -110,71 +110,134 @@ td, th {
             </button>
             <button class="bg-green-600 px-3 py-1 rounded-xl text-white" onclick="showModal()">+ NEW</button>
         </div>
-        <table class="min-w-full border-collapse border border-gray-600 bg-gray-200 text-center mt-16">
-            <thead>
-                <tr>
-                    <th class="border border-gray-300 px-4 py-2">Emër dhe Mbiemër</th>
-                    <th class="border border-gray-300 px-4 py-2">ID Number</th>
-                    <th class="border border-gray-300 px-4 py-2">Vendi</th>
-                    <th class="border border-gray-300 px-4 py-2">Pagesa</th>
-                    <th class="border border-gray-300 w-48">Opsionet</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Rreshtat e të dhënave -->
-                <tr>
-                    <td class="border border-gray-300 px-4 py-2">Emir Jakupi</td>
-                    <td class="border border-gray-300 px-4 py-2">2612004450097</td>
-                    <td class="border border-gray-300 px-4 py-2">Gostivar</td>
-                    <td class="border border-gray-300 px-4 py-2">800 den</td>
-                    <td class="border border-gray-300">
-                      <button class="border bg-green-600 px-2 text-white rounded-xl">Edit</button>
-                      <button class="border bg-red-600 px-2 text-white rounded-xl">Delete</button>  
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border border-gray-300 px-4 py-2">Ensar Jakupi</td>
-                    <td class="border border-gray-300 px-4 py-2">0504004450097</td>
-                    <td class="border border-gray-300 px-4 py-2">Gostivar</td>
-                    <td class="border border-gray-300 px-4 py-2">800 den</td>
-                    <td class="border border-gray-300">
-                      <button class="border bg-green-600 px-2 text-white rounded-xl">Edit</button>
-                      <button class="border bg-red-600 px-2 text-white rounded-xl">Delete</button>  
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border border-gray-300 px-4 py-2">Bejtulla Jakupi</td>
-                    <td class="border border-gray-300 px-4 py-2">1003001120037</td>
-                    <td class="border border-gray-300 px-4 py-2">Cajle</td>
-                    <td class="border border-gray-300 px-4 py-2">1200 den</td>
-                    <td class="border border-gray-300">
-                      <button class="border bg-green-600 px-2 text-white rounded-xl">Edit</button>
-                      <button class="border bg-red-600 px-2 text-white rounded-xl">Delete</button>  
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border border-gray-300 px-4 py-2">Fejsal Jakupi</td>
-                    <td class="border border-gray-300 px-4 py-2">0158021300047</td>
-                    <td class="border border-gray-300 px-4 py-2">Gostivar</td>
-                    <td class="border border-gray-300 px-4 py-2">1200 den</td>
-                    <td class="border border-gray-300">
-                      <button class="border bg-green-600 px-2 text-white rounded-xl">Edit</button>
-                      <button class="border bg-red-600 px-2 text-white rounded-xl">Delete</button>  
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border border-gray-300 px-4 py-2">Afrim Jakupi</td>
-                    <td class="border border-gray-300 px-4 py-2">0412260012250</td>
-                    <td class="border border-gray-300 px-4 py-2">Cajle</td>
-                    <td class="border border-gray-300 px-4 py-2">800 den</td>
-                    <td class="border border-gray-300">
-                      <button class="border bg-green-600 px-2 text-white rounded-xl">Edit</button>
-                      <button class="border bg-red-600 px-2 text-white rounded-xl">Delete</button>  
-                    </td>
-                </tr>
-                
-            </tbody>
-        </table>
+       
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-12 text-center">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  Name Surname
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  ID Number
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Place
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Price
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Action
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 ">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Auto Keta
+              </th>
+              <td class="px-6 py-4">
+                  1230145
+              </td>
+              <td class="px-6 py-4">
+                  Gostivar  
+              </td>
+              <td class="px-6 py-4">
+                  1200 den
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Microsoft Surface Pro
+              </th>
+              <td class="px-6 py-4">
+                  White
+              </td>
+              <td class="px-6 py-4">
+                  Laptop PC
+              </td>
+              <td class="px-6 py-4">
+                  $1999
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Magic Mouse 2
+              </th>
+              <td class="px-6 py-4">
+                  Black
+              </td>
+              <td class="px-6 py-4">
+                  Accessories
+              </td>
+              <td class="px-6 py-4">
+                  $99
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Google Pixel Phone
+              </th>
+              <td class="px-6 py-4">
+                  Gray
+              </td>
+              <td class="px-6 py-4">
+                  Phone
+              </td>
+              <td class="px-6 py-4">
+                  $799
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+          <tr>
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Apple Watch 5
+              </th>
+              <td class="px-6 py-4">
+                  Red
+              </td>
+              <td class="px-6 py-4">
+                  Wearables
+              </td>
+              <td class="px-6 py-4">
+                  $999
+              </td>
+              <td class="px-6 py-4">
+                <div class=" flex justify-evenly">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
     </section>
 
     <div id="productModal" class="modal">
